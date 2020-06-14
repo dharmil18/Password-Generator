@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Password Generator</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+
+	<link rel="icon" type="image/png" href="../static/images/lock.png"/>
+	
+	<link rel="stylesheet" type="text/css" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+	
+</head>
+<body>
+
+	<div class="bg-contact3" style="background-image: url('../static/images/bg.jpg');">
+		<div class="container-contact3">
+			<div class="wrap-contact3">
+				<form class="contact3-form validate-form" action="{{ url_for('generate') }}" method="post">
+					<span class="contact3-form-title">
+							Password Generator
+					</span>
+
+					<div class="wrap-input3 validate-input">
+						<div class="range-wrap">
+							<div class="range-value" id="rangeV"></div>
+							<p>Select Password Length</p>
+							<input id="range" name="range" type="range" min="8" max="128" value="8" step="1">
+						</div>
+					</div>
+
+					<div class="container-contact3-form-btn">
+						<button class="contact3-form-btn" id='btn'>
+							Generate
+						</button>
+					</div>
+				</form>
+					<br>
+						<span class="output">
+							<p>Your Generated Password</p>
+							<textarea id="textarea" name="textarea" rows="1" cols="35" readonly>{{ output }}</textarea>
+							<button class="copy-btn" id='copy-btn' onclick="copy()">
+								Copy
+							</button>
+						</span>
+			</div>
+		</div>
+		<footer>
+			<p>made by <a href="https://www.linkedin.com/in/dharmil-chhadva/" target="_blank">dharmil</a>
+		</footer>
+	</div>
+
+	<script src="../static/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../static/js/main.js"></script>
+
+</body>
+</html>

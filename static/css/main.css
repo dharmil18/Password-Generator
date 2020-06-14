@@ -1,0 +1,362 @@
+/* Slider CSS */
+
+body{
+	min-height: 100vh;
+	padding: 0 10vh;
+	margin: 0;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+input[type=range] {
+	-webkit-appearance: none;
+	margin: 20px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+	outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 4px;
+	cursor: pointer;
+  animate: 0.2s;
+	background: #03a9f4;
+	border-radius: 25px;
+}
+input[type=range]::-webkit-slider-thumb {
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 0 0 4px 0 rgba(0,0,0, 1);
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -8px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+	background: #03a9f4;
+}
+.range-wrap{
+  /* width: 500px; */
+  width: 450px;
+	position: relative;
+}
+.range-value{
+	position: absolute;
+	top: -50%;
+}
+.range-value span{
+	width: 30px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	background: #03a9f4;
+	color: #fff;
+	font-size: 12px;
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	border-radius: 6px;
+}
+.range-value span:before{
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 10px solid #03a9f4;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	margin-top: -1px;
+}
+
+/* Text area CSS */
+#textarea {
+	width: 450px;
+	height: 120px;
+	border: 3px solid #5ca8e6;
+	padding: 5px;
+  resize: none;
+  overflow: auto;
+  font-family: Poppins-Regular, sans-serif;
+  color: #5ca8e6;
+}
+textarea:focus {
+  outline: 3px solid #5ca8e6; 
+}
+
+
+/* Footer Style */
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-weight: bolder;
+  padding: 10px;
+  font-family: "Lato", sans-serif;
+  font-size: 0.7em;
+  color: #000000;
+}
+footer p {
+  letter-spacing: 3px;
+}
+footer a {
+  color: #5ca8e6;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #276FBF;
+  text-decoration: none;
+}
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+}
+/*//////////////////////////////////////////////////////////////////
+[ RESTYLE TAG ]*/
+
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-size: 100%;
+  font-family: Poppins-Regular, sans-serif;
+}
+
+p {
+	font-family: Poppins-Regular;
+	font-size: 16px;
+	line-height: 1.7;
+  color: #666666;
+	margin: 0px;
+}
+
+/* ul, li {
+	margin: 0px;
+	list-style-type: none;
+} */
+
+
+/*---------------------------------------------*/
+button {
+	outline: none !important;
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+iframe {
+	border: none !important;
+}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ Contact 2 ]*/
+.bg-contact3 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  
+}
+
+.container-contact3 {
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: rgba(255,255,255,0.8);
+  
+}
+
+.wrap-contact3 {
+  width: 550px;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 72px 55px 65px 55px;
+}
+
+.contact3-form-title {
+  display: block;
+  font-family: Poppins-Bold;
+  font-size: 39px;
+  color: #5ca8e6;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 70px;
+}
+
+
+.has-val.input3 + .focus-input3::before {
+  width: 100%;
+}
+
+/*------------------------------------------------------------------
+[  ]*/
+.container-contact3-form-btn {
+  padding-top: 23px;
+  margin-left: 35%;
+}
+
+.contact3-form-btn {
+  font-family: Poppins-Medium;
+  font-size: 16px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  min-width: 120px;
+  height: 50px;
+  border-radius: 2px;
+  position: relative;
+  z-index: 1;
+  border: 2px solid #5ca8e6;
+}
+
+.contact3-form-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  border-radius: 2px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* background: #ffffff;  */
+  opacity: 1;
+}
+.contact3-form-btn:hover {
+  background:#5ca8e6;
+  transition: background-color 0.5s;
+  color: #ffffff !important;
+}
+  
+.contact3-form-btn:hover:before {
+  opacity: 0;
+}
+
+
+/*Copy Button */
+.copy-btn {
+  padding-top: 23px;
+  margin-top: 35px;
+  margin-left: 35%;
+}
+
+.copy-btn {
+  font-family: Poppins-Medium;
+  font-size: 16px;
+  /* color: #555555; */
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  min-width: 120px;
+  height: 50px;
+  border-radius: 2px;
+  position: relative;
+  z-index: 1;
+  border: 2px solid #5ca8e6;
+}
+
+.copy-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  border-radius: 2px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  opacity: 1;
+}
+
+.copy-btn:hover {
+  background:#5ca8e6;
+  transition: background-color 0.5s;
+  color: #ffffff !important;
+}
+
+.copy-btn:hover:before {
+  opacity: 0;
+}
+
+
+
+/*------------------------------------------------------------------
+[ Responsive ]*/
+
+@media (max-width: 576px) {
+  .wrap-contact3 {
+    padding: 72px 15px 65px 15px;
+  }
+}
+
+.output {
+  font-family: Poppins-Bold;
+  font-size: 39px;
+  color: #5ca8e6;
+  text-align: center;
+}
+
+.output {
+  display: block;
+  font-family: Poppins-Bold;
+  font-size: 20px;
+  color: #5ca8e6;
+  line-height: 1.2;
+  text-align: center;
+  /* padding-bottom: 70px; */
+  padding-top: 30px;
+}
